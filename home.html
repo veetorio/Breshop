@@ -5,37 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/config.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/main.css">
     <title>Breshop</title>
 </head>
 <body>
     <!-- cabeçalho com os a navegação para outras partes do codigo -->
     <header>
         <div class="container-header">
+            <!-- logo -->
             <div>
-                <image src="assets/logo.svg" alt="logo"/>
+                <img src="assets/icons/logo.svg" alt="logo"/>
             </div>
+            <!-- barra de pesquisa + navegação -->
             <div class="content-header">
                 <span>
                     <input type="text" placeholder="Pesquisar...">
                     <button>
-                        <img src="assets/lupa.svg" alt="lupa"/>
+                        <img src="assets/icons/lupa.svg" alt="lupa"/>
                     </button>
                 </span>
                 <nav>
                     <div class="nav-item">
-                        <img src="assets/superior.svg" alt="home"/>
+                        <img src="assets/icons/superior.svg" alt="home"/>
                         <a href="#">superior</a>
                     </div>
                     <div class="nav-item">
-                        <img src="assets/inferior.svg" alt="inferior"/>
+                        <img src="assets/icons/inferior.svg" alt="inferior"/>
                         <a href="#">inferior</a>
                     </div>
                     <div class="nav-item"> 
-                        <img src="assets/fav.svg" alt="contato"/>
+                        <img src="assets/icons/fav.svg" alt="contato"/>
                         <a href="#">favoritos</a>
                     </div>
                     <div class="nav-item"> 
-                        <img src="assets/carrinho.svg" alt="contato"/>
+                        <img src="assets/icons/carrinho.svg" alt="contato"/>
                         <a href="#">carrinho</a>
                     </div>
                 </nav>   
@@ -48,13 +52,21 @@
     <main>
         <section>
             <div class="container-slide">
-
+                <div class="slide">
+                    <img src="assets/images/slide.png" alt="slide1"/>
+                </div>
                 <nav>
                     <input type="radio" name="slide" id="slide2">
                     <input type="radio" name="slide" id="slide3">
                     <input type="radio" name="slide" id="slide4">
                 </nav>
             </div>
+        </section>
+        <section class="container-box">
+            <div class="box">tendencia</div>
+            <div class="box">promocoes</div>
+            <div class="box">ofertas</div>
+            <div class="box">novidades</div>
         </section>
     </main>
 </body>
