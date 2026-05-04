@@ -3,381 +3,215 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Breshop - Moda Urbana</title>
+    <title>Breshop - E-commerce</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <!-- HEADER -->
     <header class="header">
-        <div class="header-content">
-            <div class="header-logo">
-                <h1>Breshop</h1>
+        <div class="header-container">
+            <div class="logo">
+                <img src="assets/icons/logo.svg" alt="Breshop Logo">
             </div>
-
-            <div class="header-search">
-                <input type="text" id="searchInput" placeholder="buscar por item" class="search-input">
-                <button class="search-btn">🔍</button>
+            
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    class="search-input" 
+                    placeholder="Buscar produtos..."
+                >
+                <button class="search-btn"><img src="/assets/icons/search.svg" alt=""></button>
             </div>
 
             <div class="header-actions">
-                <button class="action-btn">entrar</button>
-            </div>
-
-            <div class="header-icons">
-                <button class="icon-btn" title="Superior">👕</button>
-                <button class="icon-btn" title="Inferior">👖</button>
-                <button class="icon-btn favorites-btn" title="Favoritos">🤍</button>
-                <button class="icon-btn cart-btn" title="Carrinho">🛒</button>
+                <button id="favoritesBtn" class="header-icon-btn" title="Favoritos">
+                    <img src="assets/icons/favorites.svg" alt="Favoritos">
+                </button>
+                <button id="cartBtn" class="header-icon-btn" title="Carrinho">
+                    <img src="assets/icons/carrinho.svg" alt="Carrinho">
+                    <span id="cartCount" class="cart-count">0</span>
+                </button>
             </div>
         </div>
     </header>
 
-    <!-- MAIN BANNER -->
-    <section class="main-banner">
-        <div class="banner-container">
-            <div class="banner-content">
-                <div class="banner-products">
-                    <div class="product-showcase">
-                        <h2>Camisas da oxygeny</h2>
-                        <p class="subtitle">destaque da semana</p>
-                    </div>
+    <!-- BANNER PRINCIPAL -->
+    <section class="banner-principal">
+        <div class="banner-content">
+            <img src="assets/image/banner.png" alt="Camisetas da Oxygeny - 50% OFF" class="banner-image">
+            <div class="banner-badges">
+                <div class="badge">
+                    <span class="badge-icon">📦</span>
+                    <strong>FRETE GRÁTIS</strong>
+                    <small>a partir de R$ 100</small>
                 </div>
-
-                <div class="banner-highlight">
-                    <div class="highlight-badge">50% OFF</div>
-                    <div class="highlight-prices">
-                        <span class="price-original">de R$ 40,00</span>
-                        <p class="price-label">por apenas</p>
-                        <span class="price-current">R$ 20,00</span>
-                    </div>
-                    <button class="btn-add-cart">Adicionar ao Carrinho</button>
+                <div class="badge">
+                    <span class="badge-icon">💳</span>
+                    <strong>PARCELAMENTO</strong>
+                    <small>até 6x sem juros</small>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- BENEFITS BAR -->
-    <section class="benefits-bar">
-        <div class="benefit-item">
-            <div class="benefit-icon">📦</div>
-            <div class="benefit-text">
-                <h3>Frete</h3>
-                <p>Grátis a partir de 100R$</p>
-            </div>
-        </div>
-
-        <div class="benefit-item">
-            <div class="benefit-icon">💳</div>
-            <div class="benefit-text">
-                <h3>Parcelamento</h3>
-                <p>de até 6x sem juros</p>
-            </div>
-        </div>
-
-        <div class="benefit-item">
-            <div class="benefit-icon">🔒</div>
-            <div class="benefit-text">
-                <h3>Site seguro</h3>
-                <p>compre tranquilo</p>
-            </div>
-        </div>
-
-        <div class="benefit-item">
-            <div class="benefit-icon">💬</div>
-            <div class="benefit-text">
-                <h3>Atendimento</h3>
-                <p>WhatsApp disponível</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- CATEGORIES SECTION -->
-    <section class="categories-section">
-        <h2 class="section-title">Explore nossas categorias</h2>
-        <div class="categories-grid">
-            <div class="category-card category-card-1">
-                <div class="category-overlay"></div>
-                <h3>Promoções</h3>
-            </div>
-            <div class="category-card category-card-2">
-                <div class="category-overlay"></div>
-                <h3>Tendências</h3>
-            </div>
-            <div class="category-card category-card-3">
-                <div class="category-overlay"></div>
-                <h3>Ofertas</h3>
-            </div>
-            <div class="category-card category-card-4">
-                <div class="category-overlay"></div>
-                <h3>Novidades</h3>
-            </div>
-        </div>
-    </section>
-
-    <!-- TRENDS SECTION -->
-    <section class="trends-section">
-        <h2 class="section-title">Tendências</h2>
-        <div class="trends-grid">
-            <div class="trend-card">
-                <div class="trend-image trend-image-1"></div>
-                <h3>Streetwear e Y2k</h3>
-                <button class="btn-see">ver</button>
-            </div>
-            <div class="trend-card">
-                <div class="trend-image trend-image-2"></div>
-                <h3>Esportivo</h3>
-                <button class="btn-see">ver</button>
-            </div>
-            <div class="trend-card">
-                <div class="trend-image trend-image-3"></div>
-                <h3>Sportlife</h3>
-                <button class="btn-see">ver</button>
-            </div>
-            <div class="trend-card">
-                <div class="trend-image trend-image-4"></div>
-                <h3>Grunge e Comfy</h3>
-                <button class="btn-see">ver</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- TOP PRODUCTS SECTION -->
-    <section class="products-section products-top">
-        <h2 class="section-title">Produtos Selecionados</h2>
-        <div class="products-grid">
-            <!-- Product 1 -->
-            <div class="product-card">
-                <div class="product-image"></div>
-                <div class="product-info">
-                    <h3 class="product-name">Camisa Premium</h3>
-                    <p class="product-price">R$ 89,90</p>
-                    <div class="product-actions">
-                        <button class="btn-add-product">+ Carrinho</button>
-                        <button class="btn-favorite">🤍</button>
-                    </div>
+                <div class="badge">
+                    <span class="badge-icon">🔒</span>
+                    <strong>SITE SEGURO</strong>
+                    <small>compre tranquilo</small>
                 </div>
-            </div>
-
-            <!-- Product 2 -->
-            <div class="product-card">
-                <div class="product-image"></div>
-                <div class="product-info">
-                    <h3 class="product-name">Camiseta Básica</h3>
-                    <p class="product-price">R$ 49,90</p>
-                    <div class="product-actions">
-                        <button class="btn-add-product">+ Carrinho</button>
-                        <button class="btn-favorite">🤍</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product 3 -->
-            <div class="product-card">
-                <div class="product-image"></div>
-                <div class="product-info">
-                    <h3 class="product-name">Camisa Floral</h3>
-                    <p class="product-price">R$ 79,90</p>
-                    <div class="product-actions">
-                        <button class="btn-add-product">+ Carrinho</button>
-                        <button class="btn-favorite">🤍</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product 4 -->
-            <div class="product-card">
-                <div class="product-image"></div>
-                <div class="product-info">
-                    <h3 class="product-name">Camisa Listrada</h3>
-                    <p class="product-price">R$ 69,90</p>
-                    <div class="product-actions">
-                        <button class="btn-add-product">+ Carrinho</button>
-                        <button class="btn-favorite">🤍</button>
-                    </div>
+                <div class="badge">
+                    <span class="badge-icon">💬</span>
+                    <strong>ATENDIMENTO</strong>
+                    <small>via WhatsApp</small>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PROMOTIONS SECTION -->
-    <section class="promotions-section">
-        <h2 class="section-title">Promoções Especiais</h2>
-        <div class="promotions-container">
-            <div class="promotions-grid">
-                <!-- Promo Product 1 -->
-                <div class="product-card promo-card">
-                    <div class="product-badge">50% OFF</div>
-                    <div class="product-image"></div>
-                    <div class="product-info">
-                        <h3 class="product-name">Camisa Desconto</h3>
-                        <p class="product-price">R$ 39,90</p>
-                        <div class="product-actions">
-                            <button class="btn-add-product">+ Carrinho</button>
-                            <button class="btn-favorite">🤍</button>
-                        </div>
-                    </div>
-                </div>
+    <!-- CATEGORIAS RÁPIDAS -->
+    <section class="category-cards">
+        <div class="category-card card-promocoes">
+            <h3>Promoções</h3>
+        </div>
+        <div class="category-card card-tendencias">
+            <h3>Tendências</h3>
+        </div>
+        <div class="category-card card-ofertas">
+            <h3>ofertas</h3>
+        </div>
+        <div class="category-card card-novidades">
+            <h3>Novidades</h3>
+        </div>
+    </section>
 
-                <!-- Promo Product 2 -->
-                <div class="product-card promo-card">
-                    <div class="product-badge">40% OFF</div>
-                    <div class="product-image"></div>
-                    <div class="product-info">
-                        <h3 class="product-name">Camiseta Promoção</h3>
-                        <p class="product-price">R$ 29,90</p>
-                        <div class="product-actions">
-                            <button class="btn-add-product">+ Carrinho</button>
-                            <button class="btn-favorite">🤍</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Promo Product 3 -->
-                <div class="product-card promo-card">
-                    <div class="product-badge">30% OFF</div>
-                    <div class="product-image"></div>
-                    <div class="product-info">
-                        <h3 class="product-name">Camisa Estampada</h3>
-                        <p class="product-price">R$ 59,90</p>
-                        <div class="product-actions">
-                            <button class="btn-add-product">+ Carrinho</button>
-                            <button class="btn-favorite">🤍</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Promo Product 4 -->
-                <div class="product-card promo-card">
-                    <div class="product-badge">25% OFF</div>
-                    <div class="product-image"></div>
-                    <div class="product-info">
-                        <h3 class="product-name">Camisa Social</h3>
-                        <p class="product-price">R$ 74,90</p>
-                        <div class="product-actions">
-                            <button class="btn-add-product">+ Carrinho</button>
-                            <button class="btn-favorite">🤍</button>
-                        </div>
-                    </div>
+    <!-- TENDÊNCIAS -->
+    <section class="section-tendencias">
+        <h2>Tendencias</h2>
+        <div class="tendencias-grid">
+            <div class="tendencia-item">
+                <img src="assets/image/classicos.png" alt="Clássicos">
+                <div class="tendencia-overlay">
+                    <h4>Clássicos</h4>
+                    <p>Old money e Vintage</p>
                 </div>
             </div>
-
-            <div class="promotions-highlight">
-                <div class="highlight-box">
-                    <h3>Mega Oferta</h3>
-                    <p>Aproveite nossas promoções especiais</p>
-                    <span class="highlight-discount">Até 50% OFF</span>
+            <div class="tendencia-item">
+                <img src="assets/image/street.png" alt="Street">
+                <div class="tendencia-overlay">
+                    <h4>Street</h4>
+                    <p>Streetwear e Y2k</p>
+                </div>
+            </div>
+            <div class="tendencia-item">
+                <img src="assets/image/esportivo.png" alt="Esportivo">
+                <div class="tendencia-overlay">
+                    <h4>Esportivo</h4>
+                    <p>Sportlife</p>
+                </div>
+            </div>
+            <div class="tendencia-item">
+                <img src="assets/image/conforto.png" alt="Conforto">
+                <div class="tendencia-overlay">
+                    <h4>Conforto</h4>
+                    <p>Grunge e Comfy</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- BOTTOM PRODUCTS SECTION -->
-    <section class="products-section products-bottom">
-        <h2 class="section-title">Mais Produtos</h2>
-        <div class="products-grid">
-            <!-- Product 5 -->
-            <div class="product-card">
-                <div class="product-image"></div>
-                <div class="product-info">
-                    <h3 class="product-name">Jaqueta Casual</h3>
-                    <p class="product-price">R$ 129,90</p>
-                    <div class="product-actions">
-                        <button class="btn-add-product">+ Carrinho</button>
-                        <button class="btn-favorite">🤍</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product 6 -->
-            <div class="product-card">
-                <div class="product-image"></div>
-                <div class="product-info">
-                    <h3 class="product-name">Camisa Denim</h3>
-                    <p class="product-price">R$ 99,90</p>
-                    <div class="product-actions">
-                        <button class="btn-add-product">+ Carrinho</button>
-                        <button class="btn-favorite">🤍</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product 7 -->
-            <div class="product-card">
-                <div class="product-image"></div>
-                <div class="product-info">
-                    <h3 class="product-name">Camisa Xadrez</h3>
-                    <p class="product-price">R$ 59,90</p>
-                    <div class="product-actions">
-                        <button class="btn-add-product">+ Carrinho</button>
-                        <button class="btn-favorite">🤍</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product 8 -->
-            <div class="product-card">
-                <div class="product-image"></div>
-                <div class="product-info">
-                    <h3 class="product-name">Polo Premium</h3>
-                    <p class="product-price">R$ 85,90</p>
-                    <div class="product-actions">
-                        <button class="btn-add-product">+ Carrinho</button>
-                        <button class="btn-favorite">🤍</button>
-                    </div>
-                </div>
-            </div>
+    <!-- SUPERIORES -->
+    <section class="section-superiores">
+        <h2>Superiores</h2>
+        <div class="products-grid" id="superioresGrid">
+            <!-- Produtos serão injetados aqui -->
         </div>
     </section>
 
-    <!-- FINAL BANNER -->
-    <section class="final-banner">
-        <div class="banner-content-final">
-            <div class="banner-text-final">
-                <h2>Sua Moda, Seu Estilo</h2>
-                <p>Descubra as últimas tendências e qualidade premium</p>
-                <button class="btn-explore">Explorar Agora</button>
-            </div>
+    <!-- INFERIORES -->
+    <section class="section-inferiores">
+        <h2>Inferiores</h2>
+        <div class="products-grid" id="inferioresGrid">
+            <!-- Produtos serão injetados aqui -->
         </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- PROMOÇÕES -->
+    <section class="section-promocoes">
+        <h2>Promoções</h2>
+        <div class="promocoes-grid" id="promocoesGrid">
+            <!-- Produtos serão injetados aqui -->
+        </div>
+    </section>
+
+    <!-- BANNER FINAL -->
+    <section class="banner-final">
+        <img src="assets/image/banner_promocional.png" alt="Dreams Future Style">
+    </section>
+
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Sobre</h4>
-                <ul>
-                    <li><a href="#">Quem Somos</a></li>
-                    <li><a href="#">Política de Privacidade</a></li>
-                    <li><a href="#">Termos de Uso</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Contato</h4>
-                <ul>
-                    <li><a href="#">E-mail</a></li>
-                    <li><a href="#">WhatsApp</a></li>
-                    <li><a href="#">Telefone</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Redes Sociais</h4>
-                <ul>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Facebook</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Newsletter</h4>
-                <p>Receba as últimas ofertas</p>
-                <input type="email" placeholder="Seu e-mail" class="footer-email">
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Breshop. Todos os direitos reservados.</p>
-        </div>
-    </footer>
+  <div class="footer-container">
 
-    <script src="js/script.js"></script>
+    <div class="footer-section">
+      <h2 class="logo">Breshop</h2>
+      <p>Sua loja de roupas com estilo único.</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Produtos</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Suporte</h3>
+      <ul>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Política de Privacidade</a></li>
+        <li><a href="#">Termos de Uso</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Contato</h3>
+      <p>Email: contato@breshop.com</p>
+      <p>Telefone: (98) 99999-9999</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 Breshop. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+    <!-- MODAL CARRINHO -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Carrinho de Compras</h2>
+            <div id="cartItems" class="cart-items">
+                <!-- Itens do carrinho serão injetados aqui -->
+            </div>
+            <div class="cart-total">
+                <strong>Total: R$ <span id="cartTotal">0.00</span></strong>
+            </div>
+            <button id="checkoutBtn" class="checkout-btn">Finalizar Compra</button>
+        </div>
+    </div>
+
+
+    <!-- MODAL Favoritos -->
+    <div id="favoritesModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-modal-favorite">&times;</span>
+            <h2>Produtos Favoritos</h2>
+            <div id="favoritesItems" class="cart-items">
+                <!-- Itens dos favoritos serão injetados aqui -->
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
 </body>
 </html>
