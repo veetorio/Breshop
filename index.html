@@ -3,104 +3,381 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/config.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/slider.css">
-    <link rel="stylesheet" href="css/main.css">
-    <title>Breshop</title>
+    <title>Breshop - Moda Urbana</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- cabeçalho com os a navegação para outras partes do codigo -->
-    <header>
-        <div class="container-header">
-            <!-- logo -->
-            <div>
-                <img src="assets/icons/logo.svg" alt="logo"/>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-content">
+            <div class="header-logo">
+                <h1>Breshop</h1>
             </div>
-            <!-- barra de pesquisa + navegação -->
-            <div class="content-header">
-                <span>
-                    <input type="text" placeholder="Pesquisar...">
-                    <button>
-                        <img src="assets/icons/lupa.svg" alt="lupa"/>
-                    </button>
-                </span>
-                <nav>
-                    <div class="nav-item">
-                        <img src="assets/icons/superior.svg" alt="home"/>
-                        <a href="#">superior</a>
-                    </div>
-                    <div class="nav-item">
-                        <img src="assets/icons/inferior.svg" alt="inferior"/>
-                        <a href="#">inferior</a>
-                    </div>
-                    <div class="nav-item"> 
-                        <img src="assets/icons/fav.svg" alt="contato"/>
-                        <a href="#">favoritos</a>
-                    </div>
-                    <div class="nav-item"> 
-                        <img src="assets/icons/carrinho.svg" alt="contato"/>
-                        <a href="#">carrinho</a>
-                    </div>
-                </nav>   
+
+            <div class="header-search">
+                <input type="text" id="searchInput" placeholder="buscar por item" class="search-input">
+                <button class="search-btn">🔍</button>
             </div>
-            <button class="btn-login">
-                Login   
-            </button>
+
+            <div class="header-actions">
+                <button class="action-btn">entrar</button>
+            </div>
+
+            <div class="header-icons">
+                <button class="icon-btn" title="Superior">👕</button>
+                <button class="icon-btn" title="Inferior">👖</button>
+                <button class="icon-btn favorites-btn" title="Favoritos">🤍</button>
+                <button class="icon-btn cart-btn" title="Carrinho">🛒</button>
+            </div>
         </div>
     </header>
-    <main>
-        <section>
-            <div class="container-slide">
-                <div class="slide">
-                    <img src="assets/images/slide.png" alt="slide1"/>
+
+    <!-- MAIN BANNER -->
+    <section class="main-banner">
+        <div class="banner-container">
+            <div class="banner-content">
+                <div class="banner-products">
+                    <div class="product-showcase">
+                        <h2>Camisas da oxygeny</h2>
+                        <p class="subtitle">destaque da semana</p>
+                    </div>
                 </div>
-                <nav>
-                    <input type="radio" name="slide" id="slide2">
-                    <input type="radio" name="slide" id="slide3">
-                    <input type="radio" name="slide" id="slide4">
-                </nav>
+
+                <div class="banner-highlight">
+                    <div class="highlight-badge">50% OFF</div>
+                    <div class="highlight-prices">
+                        <span class="price-original">de R$ 40,00</span>
+                        <p class="price-label">por apenas</p>
+                        <span class="price-current">R$ 20,00</span>
+                    </div>
+                    <button class="btn-add-cart">Adicionar ao Carrinho</button>
+                </div>
             </div>
-        </section>
-        <section class="container-box">
-            <div class="box box-1">promocoes</div>
-            <div class="box box-2">tendencia</div>
-            <div class="box box-3">ofertas</div>
-            <div class="box box-4">novidades</div>
-        </section>
-        <section class="container-cards">
-            <h1>Tendencias</h1>
-            <div class="content-cards">
-                <div class="card card-1">
-                    <div>
-                        <h2>Classico</h2>
-                        <span>Old money e vintage</span>
-                        <button>ver</button>
+        </div>
+    </section>
+
+    <!-- BENEFITS BAR -->
+    <section class="benefits-bar">
+        <div class="benefit-item">
+            <div class="benefit-icon">📦</div>
+            <div class="benefit-text">
+                <h3>Frete</h3>
+                <p>Grátis a partir de 100R$</p>
+            </div>
+        </div>
+
+        <div class="benefit-item">
+            <div class="benefit-icon">💳</div>
+            <div class="benefit-text">
+                <h3>Parcelamento</h3>
+                <p>de até 6x sem juros</p>
+            </div>
+        </div>
+
+        <div class="benefit-item">
+            <div class="benefit-icon">🔒</div>
+            <div class="benefit-text">
+                <h3>Site seguro</h3>
+                <p>compre tranquilo</p>
+            </div>
+        </div>
+
+        <div class="benefit-item">
+            <div class="benefit-icon">💬</div>
+            <div class="benefit-text">
+                <h3>Atendimento</h3>
+                <p>WhatsApp disponível</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATEGORIES SECTION -->
+    <section class="categories-section">
+        <h2 class="section-title">Explore nossas categorias</h2>
+        <div class="categories-grid">
+            <div class="category-card category-card-1">
+                <div class="category-overlay"></div>
+                <h3>Promoções</h3>
+            </div>
+            <div class="category-card category-card-2">
+                <div class="category-overlay"></div>
+                <h3>Tendências</h3>
+            </div>
+            <div class="category-card category-card-3">
+                <div class="category-overlay"></div>
+                <h3>Ofertas</h3>
+            </div>
+            <div class="category-card category-card-4">
+                <div class="category-overlay"></div>
+                <h3>Novidades</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRENDS SECTION -->
+    <section class="trends-section">
+        <h2 class="section-title">Tendências</h2>
+        <div class="trends-grid">
+            <div class="trend-card">
+                <div class="trend-image trend-image-1"></div>
+                <h3>Streetwear e Y2k</h3>
+                <button class="btn-see">ver</button>
+            </div>
+            <div class="trend-card">
+                <div class="trend-image trend-image-2"></div>
+                <h3>Esportivo</h3>
+                <button class="btn-see">ver</button>
+            </div>
+            <div class="trend-card">
+                <div class="trend-image trend-image-3"></div>
+                <h3>Sportlife</h3>
+                <button class="btn-see">ver</button>
+            </div>
+            <div class="trend-card">
+                <div class="trend-image trend-image-4"></div>
+                <h3>Grunge e Comfy</h3>
+                <button class="btn-see">ver</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- TOP PRODUCTS SECTION -->
+    <section class="products-section products-top">
+        <h2 class="section-title">Produtos Selecionados</h2>
+        <div class="products-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-image"></div>
+                <div class="product-info">
+                    <h3 class="product-name">Camisa Premium</h3>
+                    <p class="product-price">R$ 89,90</p>
+                    <div class="product-actions">
+                        <button class="btn-add-product">+ Carrinho</button>
+                        <button class="btn-favorite">🤍</button>
                     </div>
                 </div>
-                      <div class="card card-1">
-                    <div>
-                        <h2>Classico</h2>
-                        <span>Old money e vintage</span>
-                        <button>ver</button>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-image"></div>
+                <div class="product-info">
+                    <h3 class="product-name">Camiseta Básica</h3>
+                    <p class="product-price">R$ 49,90</p>
+                    <div class="product-actions">
+                        <button class="btn-add-product">+ Carrinho</button>
+                        <button class="btn-favorite">🤍</button>
                     </div>
                 </div>
-                      <div class="card card-1">
-                    <div>
-                        <h2>Classico</h2>
-                        <span>Old money e vintage</span>
-                        <button>ver</button>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-image"></div>
+                <div class="product-info">
+                    <h3 class="product-name">Camisa Floral</h3>
+                    <p class="product-price">R$ 79,90</p>
+                    <div class="product-actions">
+                        <button class="btn-add-product">+ Carrinho</button>
+                        <button class="btn-favorite">🤍</button>
                     </div>
                 </div>
-                      <div class="card card-1">
-                    <div>
-                        <h2>Classico</h2>
-                        <span>Old money e vintage</span>
-                        <button>ver</button>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="product-image"></div>
+                <div class="product-info">
+                    <h3 class="product-name">Camisa Listrada</h3>
+                    <p class="product-price">R$ 69,90</p>
+                    <div class="product-actions">
+                        <button class="btn-add-product">+ Carrinho</button>
+                        <button class="btn-favorite">🤍</button>
                     </div>
                 </div>
-                
-        </section>
-    </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROMOTIONS SECTION -->
+    <section class="promotions-section">
+        <h2 class="section-title">Promoções Especiais</h2>
+        <div class="promotions-container">
+            <div class="promotions-grid">
+                <!-- Promo Product 1 -->
+                <div class="product-card promo-card">
+                    <div class="product-badge">50% OFF</div>
+                    <div class="product-image"></div>
+                    <div class="product-info">
+                        <h3 class="product-name">Camisa Desconto</h3>
+                        <p class="product-price">R$ 39,90</p>
+                        <div class="product-actions">
+                            <button class="btn-add-product">+ Carrinho</button>
+                            <button class="btn-favorite">🤍</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Promo Product 2 -->
+                <div class="product-card promo-card">
+                    <div class="product-badge">40% OFF</div>
+                    <div class="product-image"></div>
+                    <div class="product-info">
+                        <h3 class="product-name">Camiseta Promoção</h3>
+                        <p class="product-price">R$ 29,90</p>
+                        <div class="product-actions">
+                            <button class="btn-add-product">+ Carrinho</button>
+                            <button class="btn-favorite">🤍</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Promo Product 3 -->
+                <div class="product-card promo-card">
+                    <div class="product-badge">30% OFF</div>
+                    <div class="product-image"></div>
+                    <div class="product-info">
+                        <h3 class="product-name">Camisa Estampada</h3>
+                        <p class="product-price">R$ 59,90</p>
+                        <div class="product-actions">
+                            <button class="btn-add-product">+ Carrinho</button>
+                            <button class="btn-favorite">🤍</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Promo Product 4 -->
+                <div class="product-card promo-card">
+                    <div class="product-badge">25% OFF</div>
+                    <div class="product-image"></div>
+                    <div class="product-info">
+                        <h3 class="product-name">Camisa Social</h3>
+                        <p class="product-price">R$ 74,90</p>
+                        <div class="product-actions">
+                            <button class="btn-add-product">+ Carrinho</button>
+                            <button class="btn-favorite">🤍</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="promotions-highlight">
+                <div class="highlight-box">
+                    <h3>Mega Oferta</h3>
+                    <p>Aproveite nossas promoções especiais</p>
+                    <span class="highlight-discount">Até 50% OFF</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOTTOM PRODUCTS SECTION -->
+    <section class="products-section products-bottom">
+        <h2 class="section-title">Mais Produtos</h2>
+        <div class="products-grid">
+            <!-- Product 5 -->
+            <div class="product-card">
+                <div class="product-image"></div>
+                <div class="product-info">
+                    <h3 class="product-name">Jaqueta Casual</h3>
+                    <p class="product-price">R$ 129,90</p>
+                    <div class="product-actions">
+                        <button class="btn-add-product">+ Carrinho</button>
+                        <button class="btn-favorite">🤍</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product-card">
+                <div class="product-image"></div>
+                <div class="product-info">
+                    <h3 class="product-name">Camisa Denim</h3>
+                    <p class="product-price">R$ 99,90</p>
+                    <div class="product-actions">
+                        <button class="btn-add-product">+ Carrinho</button>
+                        <button class="btn-favorite">🤍</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="product-card">
+                <div class="product-image"></div>
+                <div class="product-info">
+                    <h3 class="product-name">Camisa Xadrez</h3>
+                    <p class="product-price">R$ 59,90</p>
+                    <div class="product-actions">
+                        <button class="btn-add-product">+ Carrinho</button>
+                        <button class="btn-favorite">🤍</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="product-card">
+                <div class="product-image"></div>
+                <div class="product-info">
+                    <h3 class="product-name">Polo Premium</h3>
+                    <p class="product-price">R$ 85,90</p>
+                    <div class="product-actions">
+                        <button class="btn-add-product">+ Carrinho</button>
+                        <button class="btn-favorite">🤍</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL BANNER -->
+    <section class="final-banner">
+        <div class="banner-content-final">
+            <div class="banner-text-final">
+                <h2>Sua Moda, Seu Estilo</h2>
+                <p>Descubra as últimas tendências e qualidade premium</p>
+                <button class="btn-explore">Explorar Agora</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Sobre</h4>
+                <ul>
+                    <li><a href="#">Quem Somos</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <ul>
+                    <li><a href="#">E-mail</a></li>
+                    <li><a href="#">WhatsApp</a></li>
+                    <li><a href="#">Telefone</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Redes Sociais</h4>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Facebook</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <p>Receba as últimas ofertas</p>
+                <input type="email" placeholder="Seu e-mail" class="footer-email">
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Breshop. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
