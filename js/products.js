@@ -131,13 +131,13 @@ export const PRODUCTS = {
             type: 'inferior'
         }
     ],
-    promocoes: [
+    acessorios : [
         {
             id: 'p1',
             name: 'Calça Promo A',
             price: 249.99,
             originalPrice: 349.99,
-            image: 'assets/image/produto(calça).png',
+            image: 'assets/image/acessorio.jpg',
             discount: 30,
             type: 'promocao'
         },
@@ -146,7 +146,7 @@ export const PRODUCTS = {
             name: 'Calça Promo B',
             price: 249.99,
             originalPrice: 349.99,
-            image: 'assets/image/produto(calça).png',
+            image: 'assets/image/acessorio.jpg',
             discount: 30,
             type: 'promocao'
         },
@@ -155,7 +155,7 @@ export const PRODUCTS = {
             name: 'Calça Promo C',
             price: 249.99,
             originalPrice: 349.99,
-            image: 'assets/image/produto(calça).png',
+            image: 'assets/image/acessorio.jpg',
             discount: 30,
             type: 'promocao'
         },
@@ -164,7 +164,7 @@ export const PRODUCTS = {
             name: 'Blusa Premium',
             price: 249.99,
             originalPrice: 349.99,
-            image: 'assets/image/produto(camisa).png',
+            image: 'assets/image/acessorio.jpg',
             discount: 60,
             type: 'promocao',
             featured: true
@@ -174,7 +174,7 @@ export const PRODUCTS = {
             name: 'Calça Promo D',
             price: 249.99,
             originalPrice: 349.99,
-            image: 'assets/image/produto(calça).png',
+            image: 'assets/image/acessorio.jpg',
             discount: 30,
             type: 'promocao'
         },
@@ -183,7 +183,7 @@ export const PRODUCTS = {
             name: 'Calça Promo E',
             price: 249.99,
             originalPrice: 349.99,
-            image: 'assets/image/produto(calça).png',
+            image: 'assets/image/acessorio.jpg',
             discount: 30,
             type: 'promocao'
         },
@@ -192,7 +192,7 @@ export const PRODUCTS = {
             name: 'Calça Promo F',
             price: 249.99,
             originalPrice: 349.99,
-            image: 'assets/image/produto(calça).png',
+            image: 'assets/image/acessorio.jpg',
             discount: 30,
             type: 'promocao'
         },
@@ -201,7 +201,83 @@ export const PRODUCTS = {
             name: 'Blusa Premium 2',
             price: 249.99,
             originalPrice: 349.99,
-            image: 'assets/image/produto(camisa).png',
+            image: 'assets/image/acessorio.jpg',
+            discount: 60,
+            type: 'promocao',
+            featured: true
+        }
+    ],
+    tenis : [
+        {
+            id: 'p1',
+            name: 'Calça Promo A',
+            price: 249.99,
+            originalPrice: 349.99,
+            image: 'assets/image/tenis.jpg',
+            discount: 30,
+            type: 'promocao'
+        },
+        {
+            id: 'p2',
+            name: 'Calça Promo B',
+            price: 249.99,
+            originalPrice: 349.99,
+            image: 'assets/image/tenis.jpg',
+            discount: 30,
+            type: 'promocao'
+        },
+        {
+            id: 'p3',
+            name: 'Calça Promo C',
+            price: 249.99,
+            originalPrice: 349.99,
+            image: 'assets/image/tenis.jpg',
+            discount: 30,
+            type: 'promocao'
+        },
+        {
+            id: 'p4',
+            name: 'Blusa Premium',
+            price: 249.99,
+            originalPrice: 349.99,
+            image: 'assets/image/tenis.jpg',
+            discount: 60,
+            type: 'promocao',
+            featured: true
+        },
+        {
+            id: 'p5',
+            name: 'Calça Promo D',
+            price: 249.99,
+            originalPrice: 349.99,
+            image: 'assets/image/tenis.jpg',
+            discount: 30,
+            type: 'promocao'
+        },
+        {
+            id: 'p6',
+            name: 'Calça Promo E',
+            price: 249.99,
+            originalPrice: 349.99,
+            image: 'assets/image/tenis.jpg',
+            discount: 30,
+            type: 'promocao'
+        },
+        {
+            id: 'p7',
+            name: 'Calça Promo F',
+            price: 249.99,
+            originalPrice: 349.99,
+            image: 'assets/image/tenis.jpg',
+            discount: 30,
+            type: 'promocao'
+        },
+        {
+            id: 'p8',
+            name: 'Blusa Premium 2',
+            price: 249.99,
+            originalPrice: 349.99,
+            image: 'assets/image/tenis.jpg',
             discount: 60,
             type: 'promocao',
             featured: true
@@ -213,7 +289,8 @@ export function getAllProducts() {
     return [
         ...PRODUCTS.superiores,
         ...PRODUCTS.inferiores,
-        ...PRODUCTS.promocoes
+        ...PRODUCTS.acessorios,
+        ...PRODUCTS.tenis
     ];
 }
 

@@ -118,7 +118,8 @@ function displaySearchResults(results) {
 function renderProducts() {
     renderProductSection('superioresGrid', PRODUCTS.superiores, 'product');
     renderProductSection('inferioresGrid', PRODUCTS.inferiores, 'product');
-    renderPromocoes();
+    renderAcessorios();
+    renderTenis()
 }
 
 function renderProductSection(containerId, products, type) {
@@ -133,9 +134,14 @@ function renderProductSection(containerId, products, type) {
     attachProductEventListeners();
 }
 
-function renderPromocoes() {
-    const container = document.getElementById('promocoesGrid');
-    container.innerHTML = PRODUCTS.promocoes.map(p => createPromoCard(p)).join('');
+function renderAcessorios() {
+    const container = document.getElementById('acessoriosGrid');
+    container.innerHTML = PRODUCTS.acessorios.map(p => createProductCard(p)).join('');
+    attachProductEventListeners();
+}
+function renderTenis() {
+    const container = document.getElementById('tenisGrid');
+    container.innerHTML = PRODUCTS.tenis.map(p => createProductCard(p)).join('');
     attachProductEventListeners();
 }
 
